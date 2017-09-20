@@ -1,0 +1,10 @@
+name: {[( .serviceName )]}
+description: {[( .serviceDescription )]}
+version: 0.0.0
+home: https://k8s.community/
+sources:
+  - {[( .projectURL )]}
+maintainers:
+  - name: {[( .ownerName )]}
+    email: {[( .ownerEmail )]}
+engine: gotpl
