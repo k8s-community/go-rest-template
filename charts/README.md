@@ -1,4 +1,4 @@
-k8sapp: A Helm charts for Kubernetes Application
+{[( .serviceName )]}: A helm charts for Kubernetes application
 ================================================
 
 Run of deployment for the service that satisfied of Kubernetes requirements

@@ -1,7 +1,7 @@
 name: {[( .serviceName )]}
 description: {[( .serviceDescription )]}
 version: 0.0.0
-home: https://k8s.community/
+home: {[( .homePageURL )]}
 sources:
   - {[( .projectURL )]}
 maintainers:

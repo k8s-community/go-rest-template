@@ -1,3 +1,5 @@
-## Changelog since 0.0.0
+# Version 0.0.0
 
-### Documentation
+[Documentation](README.md)
+
+## Changelog since 0.0.0

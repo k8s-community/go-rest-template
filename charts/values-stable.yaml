@@ -34,7 +34,7 @@ workflow: {([ .stable.namespace ])}
 image:
   ## Docker Registry/Hub image name and tag
   ##
-  registry: {[( .registryURL )]}
+  registry: {[( .registryHost )]}
   name: {[( .serviceName )]}
   tag: 0.0.0
 
@@ -83,7 +83,7 @@ ingress:
   ##
   pathBased:
     hosts:
-    - {[( .stable.commonServicesHost )]}
+    - {[( .stable.servicesHost )]}
 
     ## Ingress TLS configuration
     ## Secrets must be manually created in the namespace
@@ -92,7 +92,7 @@ ingress:
     tls:
     - secretName: {[( .stable.tlsServicesSecretName )]}
       hosts:
-      - {[( .stable.commonServicesHost )]}
+      - {[( .stable.servicesHost )]}
 
 service:
   ## App container name
