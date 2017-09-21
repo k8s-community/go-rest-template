@@ -17,7 +17,7 @@ GOARCH?=amd64
 {[( .EnvPrefix )]}_LOG_LEVEL?=0
 
 # Namespace: dev, prod, release, cte, username ...
-NAMESPACE?={([ .Namespace ])}
+NAMESPACE?={[( .Namespace )]}
 
 # Infrastructure: dev, stable, test ...
 INFRASTRUCTURE?={[( .Infrastructure )]}
