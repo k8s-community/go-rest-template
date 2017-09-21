@@ -5,8 +5,8 @@ import (
 	"syscall"
 	"testing"
 
-	"{[( .projectPath )]}/pkg/logger"
-	"{[( .projectPath )]}/pkg/logger/standard"
+	"{[( .ProjectPath )]}/pkg/logger"
+	"{[( .ProjectPath )]}/pkg/logger/standard"
 )
 
 const (

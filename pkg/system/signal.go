@@ -11,7 +11,7 @@ import (
 	"sync"
 	"syscall"
 
-	"{[( .projectPath )]}/pkg/logger"
+	"{[( .ProjectPath )]}/pkg/logger"
 )
 
 // SignalType describe

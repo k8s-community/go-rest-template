@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"{[( .projectPath )]}/pkg/router"
+	"{[( .ProjectPath )]}/pkg/router"
 )
 
 func getRouterForTesting() *bitroute {

@@ -7,7 +7,7 @@ package handlers
 import (
 	"net/http"
 
-	"{[( .projectPath )]}/pkg/router"
+	"{[( .ProjectPath )]}/pkg/router"
 )
 
 // Health returns "OK" if service is alive

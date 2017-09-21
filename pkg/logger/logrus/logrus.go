@@ -6,7 +6,7 @@ package logrus
 
 import (
 	"github.com/sirupsen/logrus"
-	"{[( .projectPath )]}/pkg/logger"
+	"{[( .ProjectPath )]}/pkg/logger"
 )
 
 // New creates "github.com/sirupsen/logrus" logger

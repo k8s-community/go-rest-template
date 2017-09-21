@@ -2,9 +2,9 @@
 # Use of this source code is governed by a MIT-style
 # license that can be found in the LICENSE file.
 
-APP={[( .serviceName )]}
-PROJECT={[( .projectPath )]}
-REGISTRY?={[( .registryURL )]}
+APP={[( .ServiceName )]}
+PROJECT={[( .ProjectPath )]}
+REGISTRY?={[( .RegistryURL )]}
 CA_DIR?=certs
 
 # Use the 0.0.0 tag for testing, it shouldn't clobber any release builds
@@ -12,15 +12,15 @@ RELEASE?=0.0.0
 GOOS?=linux
 GOARCH?=amd64
 
-{[( $.envPrefix | ToUpper )]}_LOCAL_HOST?=0.0.0.0
-{[( $.envPrefix | ToUpper )]}_LOCAL_PORT?=8080
-{[( $.envPrefix | ToUpper )]}_LOG_LEVEL?=0
+{[( .EnvPrefix )]}_LOCAL_HOST?=0.0.0.0
+{[( .EnvPrefix )]}_LOCAL_PORT?=8080
+{[( .EnvPrefix )]}_LOG_LEVEL?=0
 
 # Namespace: dev, prod, release, cte, username ...
-NAMESPACE?={([ .namespace ])}
+NAMESPACE?={([ .Namespace ])}
 
 # Infrastructure: dev, stable, test ...
-INFRASTRUCTURE?={[( .infrastructure )]}
+INFRASTRUCTURE?={[( .Infrastructure )]}
 VALUES?=values-${INFRASTRUCTURE}
 
 CONTAINER_IMAGE?=${REGISTRY}/${NAMESPACE}/${APP}
@@ -67,10 +67,10 @@ push: build
 .PHONY: run
 run: build
 	@echo "+ $@"
-	@docker run --name ${CONTAINER_NAME} -p ${{[( $.envPrefix | ToUpper )]}_LOCAL_PORT}:${{[( $.envPrefix | ToUpper )]}_LOCAL_PORT} \
-		-e "{[( $.envPrefix | ToUpper )]}_LOCAL_HOST=${{[( $.envPrefix | ToUpper )]}_LOCAL_HOST}" \
-		-e "{[( $.envPrefix | ToUpper )]}_LOCAL_PORT=${{[( $.envPrefix | ToUpper )]}_LOCAL_PORT}" \
-		-e "{[( $.envPrefix | ToUpper )]}_LOG_LEVEL=${{[( $.envPrefix | ToUpper )]}_LOG_LEVEL}" \
+	@docker run --name ${CONTAINER_NAME} -p ${{[( .EnvPrefix )]}_LOCAL_PORT}:${{[( .EnvPrefix )]}_LOCAL_PORT} \
+		-e "{[( .EnvPrefix )]}_LOCAL_HOST=${{[( .EnvPrefix )]}_LOCAL_HOST}" \
+		-e "{[( .EnvPrefix )]}_LOCAL_PORT=${{[( .EnvPrefix )]}_LOCAL_PORT}" \
+		-e "{[( .EnvPrefix )]}_LOG_LEVEL=${{[( .EnvPrefix )]}_LOG_LEVEL}" \
 		-d $(CONTAINER_IMAGE):$(RELEASE)
 	@sleep 1
 	@docker logs ${CONTAINER_NAME}

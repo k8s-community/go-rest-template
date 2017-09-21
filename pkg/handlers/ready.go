@@ -7,7 +7,7 @@ package handlers
 import (
 	"net/http"
 
-	"{[( .projectPath )]}/pkg/router"
+	"{[( .ProjectPath )]}/pkg/router"
 )
 
 // Ready returns "OK" if service is ready to serve traffic

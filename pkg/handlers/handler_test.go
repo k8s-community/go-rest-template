@@ -6,12 +6,12 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"{[( .projectPath )]}/pkg/config"
-	"{[( .projectPath )]}/pkg/logger"
-	"{[( .projectPath )]}/pkg/logger/standard"
-	"{[( .projectPath )]}/pkg/router"
-	"{[( .projectPath )]}/pkg/router/bitroute"
-	"{[( .projectPath )]}/pkg/version"
+	"{[( .ProjectPath )]}/pkg/config"
+	"{[( .ProjectPath )]}/pkg/logger"
+	"{[( .ProjectPath )]}/pkg/logger/standard"
+	"{[( .ProjectPath )]}/pkg/router"
+	"{[( .ProjectPath )]}/pkg/router/bitroute"
+	"{[( .ProjectPath )]}/pkg/version"
 )
 
 func TestRoot(t *testing.T) {

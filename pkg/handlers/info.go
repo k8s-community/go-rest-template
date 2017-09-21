@@ -11,8 +11,8 @@ import (
 	"runtime"
 	"time"
 
-	"{[( .projectPath )]}/pkg/router"
-	"{[( .projectPath )]}/pkg/version"
+	"{[( .ProjectPath )]}/pkg/router"
+	"{[( .ProjectPath )]}/pkg/version"
 )
 
 // Status contains detailed information about service

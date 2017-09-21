@@ -9,10 +9,10 @@ import (
 	"net/http"
 	"time"
 
-	"{[( .projectPath )]}/pkg/config"
-	"{[( .projectPath )]}/pkg/logger"
-	"{[( .projectPath )]}/pkg/router"
-	"{[( .projectPath )]}/pkg/version"
+	"{[( .ProjectPath )]}/pkg/config"
+	"{[( .ProjectPath )]}/pkg/logger"
+	"{[( .ProjectPath )]}/pkg/router"
+	"{[( .ProjectPath )]}/pkg/version"
 )
 
 // Handler defines common part for all handlers

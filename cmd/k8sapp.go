@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"log"
 
-	"{[( .projectPath )]}/pkg/config"
-	"{[( .projectPath )]}/pkg/service"
-	"{[( .projectPath )]}/pkg/system"
+	"{[( .ProjectPath )]}/pkg/config"
+	"{[( .ProjectPath )]}/pkg/service"
+	"{[( .ProjectPath )]}/pkg/system"
 )
 
 func main() {

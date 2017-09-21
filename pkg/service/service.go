@@ -7,13 +7,13 @@ package service
 import (
 	"net/http"
 
-	"{[( .projectPath )]}/pkg/config"
-	"{[( .projectPath )]}/pkg/handlers"
-	"{[( .projectPath )]}/pkg/logger"
-	stdlog "{[( .projectPath )]}/pkg/logger/standard"
-	"{[( .projectPath )]}/pkg/router"
-	"{[( .projectPath )]}/pkg/router/bitroute"
-	"{[( .projectPath )]}/pkg/version"
+	"{[( .ProjectPath )]}/pkg/config"
+	"{[( .ProjectPath )]}/pkg/handlers"
+	"{[( .ProjectPath )]}/pkg/logger"
+	stdlog "{[( .ProjectPath )]}/pkg/logger/standard"
+	"{[( .ProjectPath )]}/pkg/router"
+	"{[( .ProjectPath )]}/pkg/router/bitroute"
+	"{[( .ProjectPath )]}/pkg/version"
 )
 
 // Setup configures the service

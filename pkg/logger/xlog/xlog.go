@@ -7,7 +7,7 @@ package logger
 import (
 	"os"
 
-	"{[( .projectPath )]}/pkg/logger"
+	"{[( .ProjectPath )]}/pkg/logger"
 	"github.com/rs/xlog"
 )
 

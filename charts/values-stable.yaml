@@ -1,4 +1,4 @@
-## Default values for k8sapp.
+## Default values for {[( .ServiceName )]}.
 ## This is a YAML-formatted file.
 ## Declare variables to be passed into your templates.
 
@@ -8,7 +8,7 @@ replicaCount: 2
 
 ## Count of revisions saved in release history
 ##
-revisionHistoryLimit: 5
+revisionHistoryLimit: 1
 
 ## Time of accepting requests to the service ( seconds )
 ##
@@ -29,13 +29,13 @@ gracePeriod: 30
 
 ## Base namespace for working services
 ##
-workflow: {([ .stable.namespace ])}
+workflow: {[( .ChartEnvs.stable.Namespace )]}
 
 image:
   ## Docker Registry/Hub image name and tag
   ##
-  registry: {[( .registryHost )]}
-  name: {[( .serviceName )]}
+  registry: {[( .ChartEnvs.stable.RegistryHost )]}
+  name: {[( .ServiceName )]}
   tag: 0.0.0
 
   ## Docker Registry/Hub auth secret name, always use `registry-pull-secret` if registry inside if k8s
@@ -67,15 +67,15 @@ ingress:
   ##
   hostBased:
     hosts:
-    - {[( .stable.serviceHost )]}
+    - {[( .ChartEnvs.stable.ServiceHost )]}
 
     ## Ingress TLS configuration
     ## Secrets must be manually created in the namespace
     ##
     tls:
-    - secretName: {[( .stable.tlsSecretName )]}
+    - secretName: {[( .ChartEnvs.stable.TLSSecretName )]}
       hosts:
-      - {[( .stable.serviceHost )]}
+      - {[( .ChartEnvs.stable.ServiceHost )]}
 
   ## Ingress path feature allow access to service through path 
   ## example: https://hostname/namespace/servicename
@@ -83,21 +83,21 @@ ingress:
   ##
   pathBased:
     hosts:
-    - {[( .stable.servicesHost )]}
+    - {[( .ChartEnvs.stable.CommonServicesHost )]}
 
     ## Ingress TLS configuration
     ## Secrets must be manually created in the namespace
     ## except of case when annotatoon `kubernetes.io/tls-acme: 'true'` is present
     ##
     tls:
-    - secretName: {[( .stable.tlsServicesSecretName )]}
+    - secretName: {[( .ChartEnvs.stable.TLSServicesSecretName )]}
       hosts:
-      - {[( .stable.servicesHost )]}
+      - {[( .ChartEnvs.stable.CommonServicesHost )]}
 
 service:
   ## App container name
   ##
-  name: {[( .serviceName )]}
+  name: {[( .ServiceName )]}
   
   ## Service Type
   ## For minikube, set this to NodePort, elsewhere use ClusterIP

@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"{[( .projectPath )]}/pkg/config"
-	"{[( .projectPath )]}/pkg/logger"
+	"{[( .ProjectPath )]}/pkg/config"
+	"{[( .ProjectPath )]}/pkg/logger"
 )
 
 func TestNewLog(t *testing.T) {

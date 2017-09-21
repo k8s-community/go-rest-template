@@ -1,6 +1,6 @@
-# Kubernetes `{[( .serviceName )]}` application
+# Kubernetes `{[( .ServiceName )]}` application
 
-{[( .serviceDescription )]}
+{[( .ServiceDescription )]}
 
 Service owner: {[( .OwnerName )]} ({[( .OwnerEmail )]})
 
@@ -16,4 +16,4 @@ Thank you for your understanding!
 
 ## License
 
-[MIT Public License]({[( .projectURL )]}/blob/master/LICENSE)
+[MIT Public License](LICENSE)

@@ -8,8 +8,8 @@ import (
 	"log"
 	"os"
 
-	"{[( .projectPath )]}/pkg/config"
-	"{[( .projectPath )]}/pkg/logger"
+	"{[( .ProjectPath )]}/pkg/config"
+	"{[( .ProjectPath )]}/pkg/logger"
 )
 
 // UTC contains default UTC suffix

@@ -1,4 +1,4 @@
-## Default values for k8sapp.
+## Default values for {[( .ServiceName )]}.
 ## This is a YAML-formatted file.
 ## Declare variables to be passed into your templates.
 
@@ -29,13 +29,13 @@ gracePeriod: 30
 
 ## Base namespace for working services
 ##
-workflow: {([ .dev.namespace ])}
+workflow: {[( .ChartEnvs.dev.Namespace )]}
 
 image:
   ## Docker Registry/Hub image name and tag
   ##
-  registry: {[( .dev.registryHost )]}
-  name: {[( .serviceName )]}
+  registry: {[( .ChartEnvs.dev.RegistryHost )]}
+  name: {[( .ServiceName )]}
   tag: 0.0.0
 
   ## Docker Registry/Hub auth secret name, always use `registry-pull-secret` if registry inside if k8s
@@ -67,15 +67,15 @@ ingress:
   ##
   hostBased:
     hosts:
-    - {[( .dev.serviceHost )]}
+    - {[( .ChartEnvs.dev.ServiceHost )]}
 
     ## Ingress TLS configuration
     ## Secrets must be manually created in the namespace
     ##
     tls:
-    - secretName: {[( .dev.tlsSecretName )]}
+    - secretName: {[( .ChartEnvs.dev.TLSSecretName )]}
       hosts:
-      - {[( .dev.serviceHost )]}
+      - {[( .ChartEnvs.dev.ServiceHost )]}
 
   ## Ingress path feature allow access to service through path 
   ## example: https://hostname/namespace/servicename
@@ -83,21 +83,21 @@ ingress:
   ##
   pathBased:
     hosts:
-    - {[( .dev.servicesHost )]}
+    - {[( .ChartEnvs.dev.CommonServicesHost )]}
 
     ## Ingress TLS configuration
     ## Secrets must be manually created in the namespace
     ## except of case when annotatoon `kubernetes.io/tls-acme: 'true'` is present
     ##
     tls:
-    - secretName: {[( .dev.tlsServicesSecretName )]}
+    - secretName: {[( .ChartEnvs.dev.TLSServicesSecretName )]}
       hosts:
-      - {[( .dev.servicesHost )]}
+      - {[( .ChartEnvs.dev.CommonServicesHost )]}
 
 service:
   ## App container name
   ##
-  name: {[( .serviceName )]}
+  name: {[( .ServiceName )]}
   
   ## Service Type
   ## For minikube, set this to NodePort, elsewhere use ClusterIP

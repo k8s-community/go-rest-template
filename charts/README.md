@@ -1,4 +1,4 @@
-{[( .serviceName )]}: A helm charts for Kubernetes application
+{[( .ServiceName )]}: A helm charts for Kubernetes application
 ================================================
 
 Run of deployment for the service that satisfied of Kubernetes requirements

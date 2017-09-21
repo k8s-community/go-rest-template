@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"{[( .projectPath )]}/pkg/logger"
+	"{[( .ProjectPath )]}/pkg/logger"
 )
 
 func TestNewXLog(t *testing.T) {

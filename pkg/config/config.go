@@ -6,12 +6,12 @@ package config
 
 import (
 	"github.com/kelseyhightower/envconfig"
-	"{[( .projectPath )]}/pkg/logger"
+	"{[( .ProjectPath )]}/pkg/logger"
 )
 
 const (
 	// SERVICENAME contains a service name prefix which used in ENV variables
-	SERVICENAME = "{[( $.envPrefix | ToUpper )]}"
+	SERVICENAME = "{[( .EnvPrefix )]}"
 )
 
 // Config contains ENV variables

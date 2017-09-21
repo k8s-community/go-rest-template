@@ -8,7 +8,7 @@ import (
 	"net/http"
 
 	"github.com/julienschmidt/httprouter"
-	"{[( .projectPath )]}/pkg/router"
+	"{[( .ProjectPath )]}/pkg/router"
 )
 
 type httpRouter struct {

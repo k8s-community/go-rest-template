@@ -5,9 +5,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"{[( .projectPath )]}/pkg/config"
-	"{[( .projectPath )]}/pkg/handlers"
-	"{[( .projectPath )]}/pkg/router/bitroute"
+	"{[( .ProjectPath )]}/pkg/config"
+	"{[( .ProjectPath )]}/pkg/handlers"
+	"{[( .ProjectPath )]}/pkg/router/bitroute"
 )
 
 func TestSetup(t *testing.T) {

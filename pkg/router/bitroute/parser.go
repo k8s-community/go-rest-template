@@ -7,7 +7,7 @@ package bitroute
 import (
 	"sort"
 
-	"{[( .projectPath )]}/pkg/router"
+	"{[( .ProjectPath )]}/pkg/router"
 )
 
 const (

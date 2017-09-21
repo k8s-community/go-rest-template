@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"{[( .projectPath )]}/pkg/router"
+	"{[( .ProjectPath )]}/pkg/router"
 )
 
 type registered struct {

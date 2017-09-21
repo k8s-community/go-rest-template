@@ -10,7 +10,7 @@ import (
 	"net/http"
 	"strings"
 
-	"{[( .projectPath )]}/pkg/router"
+	"{[( .ProjectPath )]}/pkg/router"
 )
 
 type control struct {

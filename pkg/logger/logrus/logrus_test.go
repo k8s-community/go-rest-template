@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/sirupsen/logrus"
-	"{[( .projectPath )]}/pkg/logger"
+	"{[( .ProjectPath )]}/pkg/logger"
 )
 
 const (

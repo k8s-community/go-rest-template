@@ -4,10 +4,10 @@ import (
 	"net/http"
 	"testing"
 
-	"{[( .projectPath )]}/pkg/config"
-	"{[( .projectPath )]}/pkg/logger"
-	"{[( .projectPath )]}/pkg/logger/standard"
-	"{[( .projectPath )]}/pkg/router/bitroute"
+	"{[( .ProjectPath )]}/pkg/config"
+	"{[( .ProjectPath )]}/pkg/logger"
+	"{[( .ProjectPath )]}/pkg/logger/standard"
+	"{[( .ProjectPath )]}/pkg/router/bitroute"
 )
 
 func TestHealth(t *testing.T) {
