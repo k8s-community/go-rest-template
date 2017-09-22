@@ -21,6 +21,7 @@ NAMESPACE?={[( .Namespace )]}
 
 # Infrastructure (dev, stable, test ...) and kube-context for helm
 INFRASTRUCTURE?={[( .Infrastructure )]}
+KUBE_CONTEXT?=${INFRASTRUCTURE}
 VALUES?=values-${INFRASTRUCTURE}
 
 CONTAINER_IMAGE?=${REGISTRY}/${NAMESPACE}/${APP}

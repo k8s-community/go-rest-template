@@ -98,7 +98,6 @@ func TestWrite(t *testing.T) {
 	trw = httptest.NewRecorder()
 	c = NewControl(trw, req)
 	c.Body("Hello")
-
 	if trw.Body.String() != "Hello" {
 		t.Error("Expected", "Hello", "got", trw.Body.String())
 	}
