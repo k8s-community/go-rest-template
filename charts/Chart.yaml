@@ -1,10 +1,10 @@
-name: {[( .ServiceName )]}
-description: {[( .ServiceDescription )]}
-version: 0.0.0
+name: {[( .ServiceName )]}{[( if .ServiceDescription )]}
+description: {[( .ServiceDescription )]}{[( end )]}
+version: 0.0.0{[( if .HomePageURL )]}
 home: {[( .HomePageURL )]}
-sources:
-  - {[( .ProjectURL )]}
-maintainers:
+{[( end )]}{[( if .ProjectURL )]}sources:
+  - {[( .ProjectURL )]}{[( end )]}
+{[( if and .OwnerName .OwnerEmail )]}maintainers:
   - name: {[( .OwnerName )]}
     email: {[( .OwnerEmail )]}
-engine: gotpl
+{[( end )]}engine: gotpl
